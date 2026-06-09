@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Linkly API Reference</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Linkly API reference — programmatic access to your events and leads." />
+    <link rel="icon" href="./public/linkly-icon.png" />
+  </head>
+  <body>
+    <script id="api-reference" data-url="./openapi.yaml"></script>
+    <script>
+      document.getElementById('api-reference').dataset.configuration = JSON.stringify({
+        theme: 'default',
+        darkMode: true,
+        hideModels: false,
+        logo: {
+          url: './public/linkly-logo-white.png',
+          href: 'https://linkly.events',
+          altText: 'Linkly',
+        },
+        defaultHttpClient: {
+          targetKey: 'shell',
+          clientKey: 'curl',
+        },
+        authentication: {
+          preferredSecurityScheme: 'ApiKeyAuth',
+          apiKey: {
+            token: 'YOUR_API_KEY',
+          },
+        },
+        metaData: {
+          title: 'Linkly API Reference',
+          description: 'Programmatic access to your Linkly events and leads.',
+          ogTitle: 'Linkly API Reference',
+          ogDescription: 'Programmatic access to your Linkly events and leads.',
+        },
+      })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.59.2"></script>
+  </body>
+</html>
