@@ -347,7 +347,7 @@ paths:
   /get_events:
     get:
       summary: List events
-      description: Returns all non-deleted events for your company, sorted by creation date descending.
+      description: Returns all events for your company, sorted by creation date descending.
       operationId: getEvents
       tags:
         - Events
@@ -397,7 +397,7 @@ paths:
   /get_leads:
     get:
       summary: List leads
-      description: Returns all leads for your company (excluding deleted), sorted by creation date descending. Includes the associated event and the team member who captured the lead.
+      description: Returns all leads for your company, sorted by creation date descending. Includes the associated event and the team member who captured the lead.
       operationId: getLeads
       tags:
         - Leads
