@@ -23,14 +23,6 @@ Common changes:
 
 Push to `main` and Cloudflare Pages deploys automatically within ~30 seconds.
 
-## Local preview
-
-```bash
-npx serve . -p 4000
-```
-
-Then open [http://localhost:4000](http://localhost:4000).
-
 ## Deployment
 
 Hosted on Cloudflare Pages. Connected to this repo's `main` branch — every push deploys to [developer.linkly.events](https://developer.linkly.events) automatically.
