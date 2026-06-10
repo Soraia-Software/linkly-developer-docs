@@ -11,9 +11,102 @@
     <script id="api-reference" data-url="./openapi.yaml"></script>
     <script>
       document.getElementById('api-reference').dataset.configuration = JSON.stringify({
-        theme: 'default',
+        theme: 'none',
         darkMode: true,
         hideModels: false,
+        customCss: `
+          /* Linkly brand theme — derived from linkly-client-dashboard design system
+             brand-300:#75d0b3  brand-400:#3eb594  brand-500:#1f9b7a
+             brand-600:#127d62  brand-700:#006B56  brand-50:#edfaf5     */
+
+          /* ── DARK MODE ───────────────────────────────────────────── */
+          .dark-mode {
+            --scalar-background-1:          #0f0f0f;
+            --scalar-background-2:          #1a1a1a;
+            --scalar-background-3:          #272727;
+            --scalar-color-1:               #e7e7e7;
+            --scalar-color-2:               #a4a4a4;
+            --scalar-color-3:               #797979;
+            --scalar-color-accent:          #3eb594;
+            --scalar-background-accent:     rgba(62,181,148,.12);
+            --scalar-border-color:          #2d2d2d;
+            --scalar-scrollbar-color:       rgba(255,255,255,.18);
+            --scalar-scrollbar-color-active:rgba(255,255,255,.36);
+            --scalar-text-decoration-color: currentColor;
+            --scalar-text-decoration-color-hover: currentColor;
+            --scalar-button-1:              #ffffff;
+            --scalar-button-1-hover:        rgba(255,255,255,.9);
+            --scalar-button-1-color:        #0f0f0f;
+            --scalar-shadow-1:              0 1px 3px 0 rgba(0,0,0,.4);
+            --scalar-shadow-2:              0 0 0 .5px #2d2d2d, rgba(0,0,0,.4) 0 3px 6px, rgba(0,0,0,.6) 0 9px 24px;
+            --scalar-lifted-brightness:     1.45;
+            --scalar-backdrop-brightness:   .5;
+            --scalar-sidebar-background-1:         #0f0f0f;
+            --scalar-sidebar-color-1:              #e7e7e7;
+            --scalar-sidebar-color-2:              #a4a4a4;
+            --scalar-sidebar-border-color:         #1a1a1a;
+            --scalar-sidebar-item-hover-background:#1a1a1a;
+            --scalar-sidebar-item-hover-color:     #e7e7e7;
+            --scalar-sidebar-item-active-background:rgba(62,181,148,.15);
+            --scalar-sidebar-color-active:         #3eb594;
+            --scalar-sidebar-indent-border:        #1a1a1a;
+            --scalar-sidebar-indent-border-hover:  #2d2d2d;
+            --scalar-sidebar-indent-border-active: #3eb594;
+            --scalar-sidebar-search-background:    #1a1a1a;
+            --scalar-sidebar-search-color:         #797979;
+            --scalar-sidebar-search-border-color:  #2d2d2d;
+            --scalar-color-blue:   #3eb594;
+            --scalar-color-purple: #75d0b3;
+            --scalar-color-orange: #1f9b7a;
+            --scalar-color-green:  #22c55e;
+            --scalar-color-red:    #f87171;
+            --scalar-color-yellow: #facc15;
+          }
+
+          /* ── LIGHT MODE ──────────────────────────────────────────── */
+          .light-mode {
+            --scalar-background-1:          #ffffff;
+            --scalar-background-2:          #f8f9fc;
+            --scalar-background-3:          #f1f5f9;
+            --scalar-color-1:               #111827;
+            --scalar-color-2:               #475569;
+            --scalar-color-3:               #94a3b8;
+            --scalar-color-accent:          #127d62;
+            --scalar-background-accent:     rgba(18,125,98,.1);
+            --scalar-border-color:          #e2e8f0;
+            --scalar-scrollbar-color:       rgba(0,0,0,.12);
+            --scalar-scrollbar-color-active:rgba(0,0,0,.25);
+            --scalar-text-decoration-color: currentColor;
+            --scalar-text-decoration-color-hover: currentColor;
+            --scalar-button-1:              #0f172a;
+            --scalar-button-1-hover:        #1e293b;
+            --scalar-button-1-color:        #ffffff;
+            --scalar-shadow-1:              0 1px 3px 0 rgba(0,0,0,.08);
+            --scalar-shadow-2:              0 0 0 .5px #e2e8f0, rgba(0,0,0,.06) 0 3px 6px, rgba(0,0,0,.1) 0 9px 24px;
+            --scalar-lifted-brightness:     1.02;
+            --scalar-backdrop-brightness:   .8;
+            --scalar-sidebar-background-1:         #ffffff;
+            --scalar-sidebar-color-1:              #111827;
+            --scalar-sidebar-color-2:              #64748b;
+            --scalar-sidebar-border-color:         #f1f5f9;
+            --scalar-sidebar-item-hover-background:#f1f5f9;
+            --scalar-sidebar-item-hover-color:     #111827;
+            --scalar-sidebar-item-active-background:#edfaf5;
+            --scalar-sidebar-color-active:         #006B56;
+            --scalar-sidebar-indent-border:        #e2e8f0;
+            --scalar-sidebar-indent-border-hover:  #cbd5e1;
+            --scalar-sidebar-indent-border-active: #3eb594;
+            --scalar-sidebar-search-background:    #f8f9fc;
+            --scalar-sidebar-search-color:         #94a3b8;
+            --scalar-sidebar-search-border-color:  #e2e8f0;
+            --scalar-color-blue:   #127d62;
+            --scalar-color-purple: #1f9b7a;
+            --scalar-color-orange: #1f9b7a;
+            --scalar-color-green:  #16a34a;
+            --scalar-color-red:    #dc2626;
+            --scalar-color-yellow: #ca8a04;
+          }
+        `,
         logo: {
           url: './public/linkly-logo-white.png',
           href: 'https://linkly.events',
